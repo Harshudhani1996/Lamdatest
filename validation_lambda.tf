@@ -56,6 +56,7 @@ resource "aws_lambda_function" "validate_file_lambda" {
   source_code_hash = filebase64sha256("validation_lambda.zip")
   role            = aws_iam_role.lambda_role.arn
 
+# changevalidation
   environment {
     variables = {
       BUCKET_NAME       = "filesread"
